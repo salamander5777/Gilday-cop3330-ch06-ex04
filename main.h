@@ -15,13 +15,12 @@ class Name_value{
     Name_value(std::string name, int value): names(name), scores(value){}
 };
 
-int main() {
+void proper_input(){
   std::vector<Name_value> total_input;
   std::string name_input;
   int value_input;
   int error_handle = 1;
 
-  std::cout << "Input a pair of a name and value (Exit input by entering 'NoName 0':\n";
   while (std::cin){ //Will continually loop for user input until 'NoName 0' is input or an error has occured.
     //Reads in user input for pair of name and integer.
     if(error_handle == 1){
@@ -38,7 +37,7 @@ int main() {
     else{ //This else statement will verify whether a name has been input twice, if not then the current input value pair will be added to the vector array.
       for (int i=0; i<total_input.size(); ++i){
         if(name_input == total_input[i].names){
-          std::cout << "Error - Duplicate name found: '" << name_input << "'\n\n";
+          std::cout << "Error - Duplicate name entered: '" << name_input << "'\n\n";
           error_handle = 0;
         }
       }
