@@ -4,3 +4,8 @@
  */
 
 #include "main.h"
+
+int main() {
+  std::cout << "Input a pair of a name and value (Exit input by entering 'NoName 0'):\n";
+  proper_input();
+}
